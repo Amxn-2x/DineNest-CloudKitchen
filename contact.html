@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DineNest – Contact</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://i.pinimg.com/1200x/2c/04/d8/2c04d8bcba82e719fdf2aa35f79fd3b2.jpg" type="image/x-icon">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="brand">
+    <img src="https://i.pinimg.com/736x/de/de/9e/dede9e1a04bb4d07f920ecf7d6eba825.jpg" class="logo">
+    <div class="brand-text">
+      <h1>DineNest</h1>
+      <small>Fresh • Fast</small>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a class="active" href="contact.html">Contact</a>
+  </nav>
+
+  <button id="cartToggle" class="cart-btn">
+    Cart (<span id="cartCount">0</span>)
+  </button>
+</header>
+
+<!-- ================= CONTACT PAGE ================= -->
+<main class="contact-page wrap">
+
+  <div class="contact-hero">
+    <h2>Let’s Talk Food 🍽️</h2>
+    <p>Questions, feedback, or cravings — we’re listening.</p>
+  </div>
+
+  <section class="contact-grid">
+
+    <!-- LEFT INFO -->
+    <div class="contact-info card">
+      <h3>Reach Us</h3>
+
+      <div class="info-item">
+        <span>📞</span>
+        <div>
+          <strong>Phone</strong>
+          <p>+91 9236238714</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span>📧</span>
+        <div>
+          <strong>Email</strong>
+          <p>DineNest2705@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span>📍</span>
+        <div>
+          <strong>Address</strong>
+          <p>123, Food Street<br>Lucknow, Uttar Pradesh</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form card">
+      <h3>Send a Message</h3>
+
+      <form onsubmit="alert('Message sent successfully!'); return false;">
+        <div class="field">
+          <input type="text" required>
+          <label>Your Name</label>
+        </div>
+
+        <div class="field">
+          <input type="email" required>
+          <label>Your Email</label>
+        </div>
+
+        <div class="field">
+          <textarea rows="4" required></textarea>
+          <label>Your Message</label>
+        </div>
+
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+
+  </section>
+</main>
+
+<!-- ================= CART (same as before) ================= -->
+<aside id="cart" class="cart">
+  <div class="cart-head">
+    <h3>Your Cart</h3>
+    <button id="closeCart">✕</button>
+  </div>
+  <ul id="list" class="cart-list"></ul>
+  <div class="cart-foot">
+    <div>Total: ₹<span id="total">0</span></div>
+    <div class="cart-actions">
+      <button onclick="placeOrder()" class="place">Place Order</button>
+      <button onclick="clearCart()" class="muted">Clear</button>
+    </div>
+  </div>
+</aside>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-inner">
+    
+    <div class="footer-brand">
+      <h3>DineNest</h3>
+      <p>Fresh • Fast • Made with ❤️</p>
+    </div>
+
+    <div class="footer-meta">
+      <span>© 2026 DineNest</span>
+      <span>Lucknow, India</span>
+    </div>
+
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

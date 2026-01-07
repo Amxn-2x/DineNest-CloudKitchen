@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DineNest - Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://i.pinimg.com/1200x/2c/04/d8/2c04d8bcba82e719fdf2aa35f79fd3b2.jpg" type="image/x-icon">
+</head>
+<body>
+
+<!-- Header with Navbar -->
+<header class="header">
+  <div class="brand">
+    <img src="https://i.pinimg.com/736x/de/de/9e/dede9e1a04bb4d07f920ecf7d6eba825.jpg" alt="logo" class="logo">
+    <div class="brand-text">
+      <h1><b>DineNest</b></h1>
+      <small>Fresh • Fast</small>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div>
+    <button id="cartToggle" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+  </div>
+</header>
+
+<!-- Main Menu Section -->
+<main class="wrap menu-page">
+  <h2 class="section-title">Our Menu</h2>
+  <p class="menu-subtitle">Freshly prepared dishes crafted with care</p>
+
+  <section id="menu" class="grid menu-grid">
+
+    <article class="card menu-card" data-name="Margherita Pizza" data-price="250">
+      <div class="thumb">
+        <img src="https://i.pinimg.com/736x/22/c3/07/22c3076bf300f7cb3a9df261688e4348.jpg">
+        <span class="price-tag">₹250</span>
+      </div>
+      <div class="card-body">
+        <h3>Margherita Pizza</h3>
+        <p class="desc">Tomato sauce, mozzarella, basil</p>
+        <button class="add" onclick="add(this)">Add to Plate</button>
+      </div>
+    </article>
+
+    <article class="card menu-card" data-name="Veg Burger" data-price="120">
+      <div class="thumb">
+        <img src="https://i.pinimg.com/736x/e0/28/38/e02838f300641fa6354c6ad4158b0be9.jpg">
+        <span class="price-tag">₹120</span>
+      </div>
+      <div class="card-body">
+        <h3>Veg Burger</h3>
+        <p class="desc">Crispy patty, lettuce, sauce</p>
+        <button class="add" onclick="add(this)">Add to Plate</button>
+      </div>
+    </article>
+
+    <article class="card menu-card" data-name="Pasta Alfredo" data-price="200">
+      <div class="thumb">
+        <img src="https://i.pinimg.com/736x/9d/eb/fd/9debfda8f4d6a8c2457c143e98031ec6.jpg">
+        <span class="price-tag">₹200</span>
+      </div>
+      <div class="card-body">
+        <h3>Pasta Alfredo</h3>
+        <p class="desc">Creamy garlic parmesan</p>
+        <button class="add" onclick="add(this)">Add to Plate</button>
+      </div>
+    </article>
+
+    <article class="card menu-card" data-name="Paneer Tikka" data-price="180">
+      <div class="thumb">
+        <img src="https://i.pinimg.com/736x/59/81/85/5981859da80c1d8580654daf371d0ffe.jpg">
+        <span class="price-tag">₹180</span>
+      </div>
+      <div class="card-body">
+        <h3>Paneer Tikka</h3>
+        <p class="desc">Smoky marinated paneer</p>
+        <button class="add" onclick="add(this)">Add to Plate</button>
+      </div>
+    </article>
+
+    <article class="card menu-card" data-name="French Fries" data-price="80">
+      <div class="thumb">
+        <img src="https://i.pinimg.com/1200x/a7/e9/49/a7e949836929634da1a56366b4386713.jpg">
+        <span class="price-tag">₹80</span>
+      </div>
+      <div class="card-body">
+        <h3>French Fries</h3>
+        <p class="desc">Crispy salted fries</p>
+        <button class="add" onclick="add(this)">Add to Plate</button>
+      </div>
+    </article>
+
+    <article class="card menu-card" data-name="Chocolate Brownie" data-price="150">
+      <div class="thumb">
+        <img src="https://i.pinimg.com/736x/11/c0/b6/11c0b61369d9d68b94dc2722cffd0365.jpg">
+        <span class="price-tag">₹150</span>
+      </div>
+      <div class="card-body">
+        <h3>Chocolate Brownie</h3>
+        <p class="desc">Warm fudgy brownie</p>
+        <button class="add" onclick="add(this)">Add to Plate</button>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<!-- Cart -->
+<aside id="cart" class="cart">
+  <div class="cart-head">
+    <h3>Your Cart</h3>
+    <button id="closeCart">✕</button>
+  </div>
+  <ul id="list" class="cart-list"></ul>
+  <div class="cart-foot">
+    <div>Total: ₹<span id="total">0</span></div>
+    <div class="cart-actions">
+      <button onclick="placeOrder()" class="place">Place Order</button>
+      <button onclick="clearCart()" class="muted">Clear</button>
+    </div>
+  </div>
+</aside>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <h3>DineNest</h3>
+      <p>Fresh • Fast • Crafted with love</p>
+    </div>
+
+    <div class="footer-info">
+      <p>📍 Lucknow, India</p>
+      <p>🕒 Open: 10 AM – 11 PM</p>
+      <p>📞 +91 9867574648</p>
+    </div>
+
+    <div class="footer-note">
+      <p>© 2026 DineNest</p>
+      <p>Made with ❤️ for food lovers</p>
+    </div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
